@@ -5,6 +5,7 @@ view: accidents {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
+    required_access_grants: [A_GROUP]
   }
 
   dimension: accident_number {
