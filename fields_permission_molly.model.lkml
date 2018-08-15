@@ -447,6 +447,7 @@ persist_with: fields_permission_molly_default_datagroup
 
 explore: accidents {
   required_access_grants: [AA_GROUP]
+  hidden: yes
 }
 
 explore: aircraft {
