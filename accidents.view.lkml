@@ -82,7 +82,7 @@ view: accidents {
       year
     ]
     sql: ${TABLE}.event_date ;;
-    #required_access_grants: [L_GROUP]
+    required_access_grants: [L_GROUP]
   }
 
   dimension: event_id {
@@ -181,35 +181,42 @@ view: accidents {
       year
     ]
     sql: ${TABLE}.publication_date ;;
+    required_access_grants: [AA_GROUP]
   }
 
   dimension: purpose_of_flight {
     type: string
     sql: ${TABLE}.purpose_of_flight ;;
+    required_access_grants: [BB_GROUP]
   }
 
   dimension: registration_number {
     type: string
     sql: ${TABLE}.registration_number ;;
+    required_access_grants: [CC_GROUP]
   }
 
   dimension: report_status {
     type: string
     sql: ${TABLE}.report_status ;;
+    required_access_grants: [DD_GROUP]
   }
 
   dimension: schedule {
     type: string
     sql: ${TABLE}.schedule ;;
+    required_access_grants: [EE_GROUP]
   }
 
   dimension: weather_condition {
     type: string
     sql: ${TABLE}.weather_condition ;;
+    required_access_grants: [FF_GROUP]
   }
 
   measure: count {
     type: count
+    required_access_grants: [GG_GROUP]
     drill_fields: [id, airport_name]
   }
 }

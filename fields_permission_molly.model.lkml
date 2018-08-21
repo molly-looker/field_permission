@@ -445,8 +445,39 @@ access_grant: ZZZZ_GROUP {
 
 persist_with: fields_permission_molly_default_datagroup
 
+# explore: accidents {
+#   required_access_grants: [AA_GROUP]
+#   hidden: yes
+#   join: aircraft {
+#     type:  cross
+#   }
+#   join: aircraft_models {
+#     type: cross
+#   }
+#   join: airports {
+#     type: cross
+#   }
+#   join: cal454 {
+#     type: cross
+#   }
+#   join: carriers {
+#     type: cross
+#   }
+#   join: flights {
+#     type: cross
+#   }
+#   join: flights_by_day {
+#     type:  cross
+#   }
+#   join: ontime {
+#     type:  cross
+#   }
+#   join: temp2 {
+#     type:  cross
+#   }
+# }
+
 explore: accidents {
-  required_access_grants: [AA_GROUP]
   hidden: yes
 }
 
