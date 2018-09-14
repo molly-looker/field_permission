@@ -37,7 +37,6 @@ access_grant: G_GROUP {
   user_attribute: g
   allowed_values: ["g", "g+"]
 }
-
 access_grant: H_GROUP {
   user_attribute: h
   allowed_values: ["h", "h+"]
@@ -46,7 +45,6 @@ access_grant: I_GROUP {
   user_attribute: i
   allowed_values: ["i", "i+"]
 }
-
 access_grant: J_GROUP {
   user_attribute: j
   allowed_values: ["j", "j+"]
@@ -59,7 +57,6 @@ access_grant: L_GROUP {
   user_attribute: l
   allowed_values: ["l", "l+"]
 }
-
 access_grant: M_GROUP {
   user_attribute: m
   allowed_values: ["m", "m+"]
@@ -448,22 +445,78 @@ access_grant: ZZZZ_GROUP {
 
 persist_with: fields_permission_molly_default_datagroup
 
-explore: accidents {}
+# explore: accidents {
+#   required_access_grants: [AA_GROUP]
+#   hidden: yes
+#   join: aircraft {
+#     type:  cross
+#   }
+#   join: aircraft_models {
+#     type: cross
+#   }
+#   join: airports {
+#     type: cross
+#   }
+#   join: cal454 {
+#     type: cross
+#   }
+#   join: carriers {
+#     type: cross
+#   }
+#   join: flights {
+#     type: cross
+#   }
+#   join: flights_by_day {
+#     type:  cross
+#   }
+#   join: ontime {
+#     type:  cross
+#   }
+#   join: temp2 {
+#     type:  cross
+#   }
+# }
 
-explore: aircraft {}
+explore: accidents {
+  hidden: yes
+}
 
-explore: aircraft_models {}
+explore: aircraft {
+  hidden: yes
+}
 
-explore: airports {}
+explore: aircraft_models {
+  hidden: yes
+}
 
-explore: cal454 {}
+explore: airports {
+  hidden: yes
+}
 
-explore: carriers {}
+explore: cal454 {
+  hidden: yes
+}
 
-explore: flights {}
+explore: carriers {
+  hidden: yes
+}
 
-explore: flights_by_day {}
+explore: extended_accidents {
+  hidden: yes
+}
 
-explore: ontime {}
+explore: flights {
+  hidden: yes
+}
 
-explore: temp2 {}
+explore: flights_by_day {
+  hidden: yes
+}
+
+explore: ontime {
+  hidden: yes
+}
+
+explore: temp2 {
+  hidden: yes
+}
