@@ -53,6 +53,11 @@ view: flights {
     type: string
     sql: ${TABLE}.destination ;;
   }
+  dimension: destination_location {
+    type: location
+    sql_latitude: '-33.8688' ;;
+    sql_longitude: '151.2093' ;;
+  }
 
   dimension: distance {
     type: number
@@ -82,6 +87,12 @@ view: flights {
   dimension: origin {
     type: string
     sql: ${TABLE}.origin ;;
+  }
+
+  dimension: origin_location {
+    type: location
+    sql_latitude: '37.7749' ;;
+    sql_longitude: '-122.4194' ;;
   }
 
   dimension: tail_num {
