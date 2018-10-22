@@ -2,6 +2,11 @@ view: accidents {
   sql_table_name: public.accidents ;;
   required_access_grants: [A_GROUP]
 
+  dimension: fake {
+    type: string
+    sql:  "A" ;;
+  }
+
   dimension: id {
     primary_key: yes
     type: number
