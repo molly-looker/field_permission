@@ -445,7 +445,8 @@ access_grant: ZZZZ_GROUP {
 
 persist_with: fields_permission_molly_default_datagroup
 
-# explore: accidents {
+#  explore: accidents1 {
+#   from: accidents
 #   required_access_grants: [AA_GROUP]
 #   hidden: yes
 #   join: aircraft {

@@ -1,6 +1,6 @@
 view: accidents {
   sql_table_name: public.accidents ;;
-  required_access_grants: [AA_GROUP]
+  #required_access_grants: [AA_GROUP]
 
   dimension: id {
     primary_key: yes

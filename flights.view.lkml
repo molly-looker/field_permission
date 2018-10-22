@@ -65,7 +65,7 @@ view: flights {
   }
 
   dimension: flight_num {
-    type: string
+    type: number
     sql: ${TABLE}.flight_num ;;
   }
 
@@ -82,6 +82,8 @@ view: flights {
   dimension: origin {
     type: string
     sql: ${TABLE}.origin ;;
+    suggest_dimension:  flights_suggest.origin
+
   }
 
   dimension: tail_num {

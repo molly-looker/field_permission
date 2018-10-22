@@ -2,7 +2,7 @@
  include: "fields_permission_molly.model.lkml"
 
 view: ndt {
-  required_access_grants: [AA_GROUP]
+  #required_access_grants: [AA_GROUP]
   derived_table: {
     explore_source: accidents {
       column: id {}
