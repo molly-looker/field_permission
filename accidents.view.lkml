@@ -1,11 +1,6 @@
 view: accidents {
   sql_table_name: public.accidents ;;
-  required_access_grants: [A_GROUP]
-
-  dimension: fake {
-    type: string
-    sql:  "A" ;;
-  }
+  #required_access_grants: [AA_GROUP]
 
   dimension: id {
     primary_key: yes
@@ -17,9 +12,14 @@ view: accidents {
   dimension: accident_number {
     type: string
     sql: ${TABLE}.accident_number ;;
-    required_access_grants: [B_GROUP]
+    required_access_grants: [AA_GROUP]
   }
 
+  dimension: test {
+    type: string
+    sql:  ${accident_number} ;;
+    #required_access_grants: [AA_GROUP]
+  }
   dimension: air_carrier {
     type: string
     sql: ${TABLE}.air_carrier ;;
@@ -223,5 +223,10 @@ view: accidents {
     type: count
     required_access_grants: [GG_GROUP]
     drill_fields: [id, airport_name]
+  }
+
+  measure: count_distinct {
+    type: count_distinct
+    sql: ${accident_number} ;;
   }
 }

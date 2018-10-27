@@ -480,10 +480,18 @@ persist_with: fields_permission_molly_default_datagroup
 
 explore: accidents {
   hidden: yes
+  join: aircraft {
+    required_access_grants: [B_GROUP]
+    type:  cross
+  }
 }
 
 explore: aircraft {
+  required_access_grants: [A_GROUP]
   hidden: yes
+  join: airports {
+     type: cross
+  }
 }
 
 explore: aircraft_models {
