@@ -483,6 +483,17 @@ explore: accidents {
   join: aircraft {
     required_access_grants: [B_GROUP]
     type:  cross
+    relationship: many_to_one
+  }
+  always_filter: {
+    filters: {
+      field: source
+      value: "Afghanistan, Algeria"
+    }
+    filters: {
+      field: engine_type
+      value: "Unknown"
+    }
   }
 }
 
@@ -491,6 +502,7 @@ explore: aircraft {
   hidden: yes
   join: airports {
      type: cross
+    relationship: many_to_one
   }
 }
 

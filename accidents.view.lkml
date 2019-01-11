@@ -219,10 +219,37 @@ view: accidents {
     required_access_grants: [FF_GROUP]
   }
 
+  dimension: source {
+    description: "Shake or In setting"
+    type: string
+    case_sensitive: no
+
+    case: {
+      when: {
+        sql: ${TABLE}.country = 'Afghanistan' ;;
+        label: "Afghanistan"
+      }
+      when: {
+        sql: ${TABLE}.country = 'Algeria' ;;
+        label: "Algeria"
+      }
+
+      else: "Unknown"
+    }
+
+  }
+
   measure: count {
     type: count
     required_access_grants: [GG_GROUP]
     drill_fields: [id, airport_name]
+  }
+
+  measure: sum {
+    type: sum
+    sql: ${id} ;;
+    drill_fields: [id, airport_name]
+    value_format_name: usd
   }
 
   measure: count_distinct {

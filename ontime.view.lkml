@@ -21,16 +21,19 @@ view: ontime {
   }
 
   dimension: cancelled {
+    description: "this is a long description"
     type: string
     sql: ${TABLE}.cancelled ;;
   }
 
   dimension: carrier {
+    description: "this is another long description"
     type: string
     sql: ${TABLE}.carrier ;;
   }
 
   dimension: dep_delay {
+    description: "this is a longer description"
     type: number
     sql: ${TABLE}.dep_delay ;;
   }
@@ -50,16 +53,19 @@ view: ontime {
   }
 
   dimension: destination {
+    description: "this is a long description yippee"
     type: string
     sql: ${TABLE}.destination ;;
   }
 
   dimension: distance {
+    description: "this is an additional long description"
     type: number
     sql: ${TABLE}.distance ;;
   }
 
   dimension: diverted {
+    description: "this is a lengthy description"
     type: string
     sql: ${TABLE}.diverted ;;
   }

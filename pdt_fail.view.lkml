@@ -1,8 +1,7 @@
-view: pdt_fail {
+view: numbertest {
   derived_table: {
-    sql: select 1 AS a FROM 'table'
+    sql: select 12345678 AS a
       ;;
-    sql_trigger_value: SELECT CURRENT_DATE() ;;
   }
 
   measure: count {
@@ -11,10 +10,12 @@ view: pdt_fail {
   }
   dimension: column {
     type: number
+    hidden:  no
+    label: "number"
     sql: ${TABLE}.a ;;
   }
 
 }
- explore: pdt_fail {
+ explore: numbertest {
    hidden:  yes
  }
