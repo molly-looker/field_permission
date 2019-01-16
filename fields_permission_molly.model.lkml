@@ -488,7 +488,7 @@ explore: accidents {
   always_filter: {
     filters: {
       field: source
-      value: "Afghanistan, Algeria"
+      value: "Afghanistan, Canada"
     }
     filters: {
       field: engine_type

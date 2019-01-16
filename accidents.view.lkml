@@ -20,6 +20,12 @@ view: accidents {
     sql:  ${accident_number} ;;
     #required_access_grants: [AA_GROUP]
   }
+
+  dimension: access_grants_test1 {
+    type: string
+    sql: CASE WHEN '{{ _user_attributes["can_see_stuff"] }}' = 'yes' THEN ${accident_number} ELSE 0 END ;;
+  }
+
   dimension: air_carrier {
     type: string
     sql: ${TABLE}.air_carrier ;;
