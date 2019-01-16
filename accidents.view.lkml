@@ -23,7 +23,7 @@ view: accidents {
 
   dimension: access_grants_test1 {
     type: string
-    sql: CASE WHEN '{{ _user_attributes["can_see_stuff"] }}' = 'yes' THEN ${accident_number} ELSE 0 END ;;
+    sql: CASE WHEN '{{ _user_attributes["can_see_stuff"] }}' = 'yes' THEN ${accident_number} ELSE "you shall not pass" END ;;
   }
 
   dimension: air_carrier {
