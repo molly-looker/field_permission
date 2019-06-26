@@ -89,4 +89,4 @@ view: badquery {
     }
   }
 
-explore: badquery {}
+#explore: badquery {}
